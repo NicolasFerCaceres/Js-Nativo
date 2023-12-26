@@ -3,9 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>To do list</title>
+    <!-- My Style -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    
+    <div id="to-do-list">
+          <header class="header">
+            <h1 id="title">To Do List</h1>
+        </header>
+        <ul class="container">
+            <li>Comprar leche</li>
+            <li>Comprar Pan</li>            
+        </ul>
+        <button id="delete-btn">Delete</button>
+        <form id="toDoForm" action="post" autocomplete="off">
+            <label for="newTask"></label>
+            <input id="newTask" type="text">
+            <button id="submite-btn">New task</button>
+        </form>
+        
+    </div>
 </body>
+<script src="script.js"></script>
 </html>
