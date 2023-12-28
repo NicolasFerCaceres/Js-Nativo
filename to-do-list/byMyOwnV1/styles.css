@@ -50,15 +50,20 @@ li {
     list-style: none;
     cursor: pointer;
     margin: 8px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
 }
 
 .container {
     padding: 50px 40px;
     font-size: 2rem;
     color: #adaabd;
+    overflow: auto;
+    max-height: 500px;
 }
 
-#delete-btn {
+#deleteBtn {
     position: absolute;
     top: 55px;
     right: 35px;
@@ -95,10 +100,16 @@ input:focus {
 }
 
 
-#submite-btn {
+#submitebtn {
     padding: 4px;
     background: #372b7936;
     color: white;
     border-radius: 3px;
     font-size: 1.5rem;
+}
+
+.checked {
+    color: white;
+    text-decoration: line-through;
+
 }
