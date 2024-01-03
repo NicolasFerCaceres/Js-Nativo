@@ -4,16 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,700;1,100;1,300&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <form autocomplete="off" id="taskForm">
-        <label for="newTask"></label>
-        <input type="text" name="Task" id="newTask">
-        <button id="newTaskBtn">Add to do</button>
-    </form>
-    <ul id="list">
-
-    </ul>
+    <h1>To do list!</h1>
+    <div class="container">
+        <form autocomplete="off" id="taskForm">
+            <label for="newTask"></label>
+            <input type="text" name="Task" id="newTask">
+            <button id="newTaskBtn">Add to do</button>
+        </form>
+        <ul id="list">
+    
+        </ul>
+    </div>
 <script src="index.js"></script>
 </body>
 </html>

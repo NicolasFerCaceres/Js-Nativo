@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --red: #AAD9BB;
+    --dark-red: #80BCBD;
+    --yellow: #365486;
+    --orange: #7BD3EA;
+}
+
+html {
+    font-size: 10px;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+
+
+body {
+    min-height: 100vh;
+    background: var(--red);
+    display: grid;
+    place-items: center;
+}
+
+.calculadora {
+    background: var(--dark-red);
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 350px;
+    max-width: 100%;
+    padding: 20px;
+    gap: 5px;
+    border-radius: 2px;
+    border: 2px solid var(--yellow);
+    border-radius: 3px;
+}
+
+.pantalla {
+    background-color: var(--red);
+    grid-column: 1 / -1 ;
+    padding: 15px;
+    font-size: 2.2rem;
+    text-align: right;
+    margin-bottom: 10px;
+    font-weight: 600;
+    border: 3px solid var(--yellow);
+    overflow: hidden;
+}
+
+.btn {
+    background: none;
+    color: var(--yellow);
+    border: 3px solid var(--yellow);
+    padding: 15px 10px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 200ms;
+    font-size: 2rem;
+}
+
+.btn:hover {
+    background: var(--yellow);
+    color: var(--dark-red);
+}
+
+#cero {
+    grid-column: span 2;
+}
+
+#igual {
+    grid-row: span 2;
+    background: var(--orange);
+}
+
+#igual:hover {
+    background: var(--dark-red);
+    color: var(--yellow);
+}

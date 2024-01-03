@@ -13,15 +13,21 @@ displayElements();
 // THIS CODE WILL BRING ME THE CHANCE TO STORE THE INFO IN THE CACHE, THIS WILL BRING THE POSIBILITY TO THE USER TO NO LOOSE HIS INFO.
 form.addEventListener('submit', function(event){
     event.preventDefault();
-    // Here I will have all the stored information in the cache or in case that is empty it will create an empty array.
-    const storedItems = JSON.parse(localStorage.getItem('items')) || [];
-    // This will add the Task to the stored elements
-    storedItems.push(formInput.value);
-    // This will store all the data in the localStorage.
-    localStorage.setItem('items', JSON.stringify(storedItems));
-    // This will resete the input field
-    this.reset();
-    displayElements()
+    if(formInput.value) {
+        // Here I will have all the stored information in the cache or in case that is empty it will create an empty array.
+        const storedItems = JSON.parse(localStorage.getItem('items')) || [];
+        // This will add the Task to the stored elements
+        storedItems.push(formInput.value);
+        // This will store all the data in the localStorage.
+        localStorage.setItem('items', JSON.stringify(storedItems));
+        // This will resete the input field
+        this.reset();
+        displayElements()
+    } else {
+        alert('You should write something before submit')
+    }
+    
+    
 });
 
 function displayElements() {
