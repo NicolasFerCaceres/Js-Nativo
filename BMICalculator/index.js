@@ -6,14 +6,18 @@
 
 // Store the previous BMI
 const bmiForm = document.getElementById('bmiForm');
-const weightInput = document.getElementById('weight')
-const heightInput = document.getElementById('height')
+const weightInput = document.getElementById('weight');
+const heightInput = document.getElementById('height');
+const bmiP = document.getElementById('bmiText');
+
 
 bmiForm.addEventListener('submit', (event) => {
-        event.preventDefault;
+        event.preventDefault();
         const weight = weightInput.value;
         const height = heightInput.value;
-        console.log(weight + ' | ' + height)
+        const bmi = weight / (height * height);
+        bmiP.textContent = 'Your BMI is: ' + bmi + '.';
+        console.log(bmi)
 });
 
 /* 
