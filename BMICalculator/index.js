@@ -12,14 +12,35 @@ const bmiP = document.getElementById('bmiText');
 
 
 bmiForm.addEventListener('submit', (event) => {
-        event.preventDefault();
-        const weight = weightInput.value;
-        const height = heightInput.value;
-        const bmi = weight / (height * height);
-        bmiP.textContent = 'Your BMI is: ' + bmi + '.';
-        console.log(bmi)
+    event.preventDefault();
+    const weight = weightInput.value;
+    const height = heightInput.value;
+    const bmi = Math.round((weight / (height * height)) * 100) / 100;
+
+    if (weight === '' || height === '') {
+        showError('Should complete both fields to know your BMI.');
+        return;
+    } else if (!/^\d+$/.test(weight) || !/^\d+$/.test(height)) {
+        showError('Only numbers, please.');
+        return;
+    }
+
+    showBMI('Your BMI is: ' + bmi);
 });
 
+function showError(message) {
+    bmiP.textContent = message;
+    bmiP.style.color = 'red';
+    bmiP.style.opacity = '0';
+    bmiP.style.transition = 'opacity 0.5s ease'; // Transition for color change
+}
+
+function showBMI(message) {
+    bmiP.textContent = message;
+    bmiP.style.color = 'green';
+    bmiP.style.opacity = '0';
+    bmiP.style.transition = 'opacity 0.5s ease'; // Transition for color change
+}
 /* 
 function getRange(bmi) {
     if(bmi < 18.5) {
