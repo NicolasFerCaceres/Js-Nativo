@@ -11,46 +11,69 @@
     <div>
         <form id="bmiForm" autocomplete="off">
             <label for="weight">Weight</label>
-            <input type="text" id="weight">
+            <input class="bmiInput" type="text" id="weight">
             <label for="height">Height</label>
-            <input type="text" id="height">
-            <button>Calculate BMI</button>
+            <input class="bmiInput" type="text" id="height">
+            <button id='submitBtn' type="button">Calculate BMI</button>
         </form>
         <div>
-            <p id="bmiText"></p>
+            <p id="bmiText" class="bmiP"></p>
+        </div>
+    </div>
+    <div>
+        <h2>Deseable weight</h2>
+        <form id="formWeight" autocomplete="off">
+            <label for="heightTwo">Height</label>
+            <input type="text" id="heightTwo">
+            <select name="category" id="catSelector">
+                <option value="underweight">Underweight</option>
+                <option value="normal">Normal</option>
+                <option value="overweight">Overweight</option>
+                <option value="obesityClassI">Obesity Class I</option>
+                <option value="obesityClassII">Obesity Class II</option>
+                <option value="obesityClassII">Obesity Class III</option>
+            </select>
+            <button id="calWeightBtn" type="button">Calculate weight</button>
+        </form>
+        <div>
+            <p id="weightRange" class="bmiP"></p>
         </div>
     </div>
     <div>
         <h2>BMI table</h2>
-        <table>
-            <tr>
-                <td>Category</td>
-                <td>BMI</td>
-            </tr>
-            <tr>
-                <td>Underweight</td>
-                <td>BMI below 18.5</td>
-            </tr>
-            <tr>
-                <td>Normal</td>
-                <td>BMI 18.5-24.9</td>
-            </tr>
-            <tr>
-                <td>Overweight</td>
-                <td>BMI 25-29.9</td>
-            </tr>
-            <tr>
-                <td>Obesity class I</td>
-                <td>BMI 30-34.9</td>
-            </tr>
-            <tr>
-                <td>Obeseity class II</td>
-                <td>BMI 35-39.9</td>
-            </tr>
-            <tr>
-                <td>Obeseity class III</td>
-                <td>BMI biger than 40</td>
-            </tr>
+        <table> 
+            <thead>    
+                <tr>
+                    <td>Category</td>
+                    <td>BMI</td>
+                </tr>
+            </thead>
+            <tbody>    
+                <tr>
+                    <td>Underweight</td>
+                    <td>BMI below 18.5</td>
+                </tr>
+                <tr>
+                    <td>Normal</td>
+                    <td>BMI 18.5-24.9</td>
+                </tr>
+                <tr>
+                    <td>Overweight</td>
+                    <td>BMI 25-29.9</td>
+                </tr>
+                <tr>
+                    <td>Obesity class I</td>
+                    <td>BMI 30-34.9</td>
+                </tr>
+                <tr>
+                    <td>Obesity class II</td>
+                    <td>BMI 35-39.9</td>
+                </tr>
+                <tr>
+                    <td>Obesity class III</td>
+                    <td>BMI biger than 40</td>
+                </tr>
+            </tbody>
         </table>
         
     </div>   
