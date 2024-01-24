@@ -1,0 +1,42 @@
+{
+  "1234": {
+    "category": "electronics",
+    "name": "laptop",
+    "links":""
+  },
+  "5678": {
+    "category": "clothing",
+    "name": "shirt",
+    "links":""
+  },
+  "9012": {
+    "category": "books",
+    "name": "The Lord of the Rings",
+    "links":""
+  },
+  "3456": {
+    "category": "food",
+    "name": "pizza",
+    "links":""
+  },
+  "7890": {
+    "category": "sports",
+    "name": "basketball",
+    "links":""
+  },
+  "abcd": {
+    "category": "music",
+    "name": "guitar",
+    "links":""
+  },
+  "efgh": {
+    "category": "movies",
+    "name": "Star Wars",
+    "links":""
+  },
+  "ijkl": {
+    "category": "toys",
+    "name": "lego",
+    "links":""
+  }
+}
